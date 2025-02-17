@@ -31,7 +31,7 @@
     <div class="display">{{ displayValue }}</div>
     <!-- 各ボタン(1列目) -->
     <button @click="clearDisplay">AC</button>
-    <button @click="">CE</button>
+    <button @click="clearEntry">CE</button>
     <button @click="">%</button>
     <button @click="setOperator('/')">÷</button> <br>
     <!-- 各ボタン(2列目) -->
@@ -112,12 +112,16 @@
           this.selectedOperator = null;
           this.sutiflag = false;
         },
-        // クリア処理（「C」が押された場合の処理）
+        // クリア処理（「AC」が押された場合の処理）
         clearDisplay() {
           this.displayValue = '0';
           this.previousValue = null;
           this.selectedOperator = null;
         },                 
+        // クリア処理（「CE」が押された場合の処理）
+        clearEntry() {
+          this.displayValue = '0';
+        },
       },
     });
   </script>
