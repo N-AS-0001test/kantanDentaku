@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vue.js 電卓 vol.3</title>
+  <title>Vue.js 電卓 vol.4</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <style>
     .calculator {
@@ -33,25 +33,25 @@
     <button @click="clearDisplay">AC</button>
     <button @click="">CE</button>
     <button @click="">%</button>
-    <button @click="setOperator('/')">÷</button> <br>
+    <button accesskey="/"@click="setOperator('/')">÷</button> <br>
     <!-- 各ボタン(2列目) -->
-    <button @click="appendNumber('7')">7</button>
-    <button @click="appendNumber('8')">8</button>
-    <button @click="appendNumber('9')">9</button>
-    <button @click="setOperator('*')">×</button> <br>
+    <button accesskey="7"@click="appendNumber('7')">7</button>
+    <button accesskey="8"@click="appendNumber('8')">8</button>
+    <button accesskey="9"@click="appendNumber('9')">9</button>
+    <button accesskey="*"@click="setOperator('*')">×</button> <br>
     <!-- 各ボタン(3列目) -->
-    <button @click="appendNumber('4')">4</button>
-    <button @click="appendNumber('5')">5</button>
-    <button @click="appendNumber('6')">6</button>
-    <button @click="setOperator('-')">-</button> <br>
+    <button accesskey="4"@click="appendNumber('4')">4</button>
+    <button accesskey="5"@click="appendNumber('5')">5</button>
+    <button accesskey="6"@click="appendNumber('6')">6</button>
+    <button accesskey="-"@click="setOperator('-')">-</button> <br>
     <!-- 各ボタン(4列目) -->
-    <button @click="appendNumber('1')">1</button>
-    <button @click="appendNumber('2')">2</button>
-    <button @click="appendNumber('3')">3</button>
-    <button @click="setOperator('+')">+</button> <br>
+    <button accesskey="1"@click="appendNumber('1')">1</button>
+    <button accesskey="2"@click="appendNumber('2')">2</button>
+    <button accesskey="3"@click="appendNumber('3')">3</button>
+    <button accesskey="+"@click="setOperator('+')">+</button> <br>
     <!-- 各ボタン(5列目) -->
-    <button @click="appendNumber('0')">0</button>
-    <button @click="appendNumber('.')">.</button>
+    <button accesskey="0"@click="appendNumber('0')">0</button>
+    <button accesskey="."@click="appendNumber('.')">.</button>
     <button @click="calculate">=</button>
   </div>
 
@@ -117,7 +117,7 @@
           this.displayValue = '0';
           this.previousValue = null;
           this.selectedOperator = null;
-        },                 
+        },
       },
     });
   </script>
