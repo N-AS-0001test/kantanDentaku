@@ -30,27 +30,29 @@
     <!-- 表示欄 -->
     <div class="display">{{ displayValue }}</div>
     <!-- 各ボタン(1列目) -->
+    <button @click="clearDisplay">AC</button>
+    <button @click="">CE</button>
+    <button @click="">%</button>
+    <button @click="setOperator('/')">÷</button> <br>
+    <!-- 各ボタン(2列目) -->
     <button @click="appendNumber('7')">7</button>
     <button @click="appendNumber('8')">8</button>
     <button @click="appendNumber('9')">9</button>
-    <button @click="setOperator('/')">/</button> <br>
-    <!-- 各ボタン(2列目) -->
+    <button @click="setOperator('*')">×</button> <br>
+    <!-- 各ボタン(3列目) -->
     <button @click="appendNumber('4')">4</button>
     <button @click="appendNumber('5')">5</button>
     <button @click="appendNumber('6')">6</button>
-    <button @click="setOperator('*')">*</button> <br>
-    <!-- 各ボタン(3列目) -->
+    <button @click="setOperator('-')">-</button> <br>
+    <!-- 各ボタン(4列目) -->
     <button @click="appendNumber('1')">1</button>
     <button @click="appendNumber('2')">2</button>
     <button @click="appendNumber('3')">3</button>
-    <button @click="setOperator('-')">-</button> <br>
-    <!-- 各ボタン(4列目) -->
+    <button @click="setOperator('+')">+</button> <br>
+    <!-- 各ボタン(5列目) -->
     <button @click="appendNumber('0')">0</button>
     <button @click="appendNumber('.')">.</button>
     <button @click="calculate">=</button>
-    <button @click="setOperator('+')">+</button> <br>
-    <!-- 各ボタン(5列目) -->
-    <button @click="clearDisplay">C</button>
   </div>
 
   <script>
