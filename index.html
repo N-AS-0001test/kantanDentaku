@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vue.js 電卓 vol.1</title>
+  <title>Vue.js 電卓 vol.2</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <style>
     .calculator {
@@ -70,10 +70,11 @@
           if (this.displayValue === '0') {
             this.displayValue = number;
           } else {
-            if(this.sutiflag){
+          if (this.sutiflag) {
             this.displayValue += number;
+          } else {
+              this.displayValue = number;
           }
-          else{this.displayValue = number;}
         }
         this.sutiflag = true;
         },
